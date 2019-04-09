@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h5>Please add your shipping address</h5>
+<div class="form-group border">
+    {% if sh_obj %} {% for s in sh_obj %} {{s.city}} {% endfor %} {% else %}
+    <h5>there is no address saved</h5> {% endif %}
+</div>
+<div class="container border ml-1 " >
+    <form class="form-group " action="{% url 'cart:checkout' %}" method="post">
+        {{form.as_p}} {% csrf_token %}
+        <input type="submit" name="" value="Save">
+    </form>
+
+    <form action="/charge" method="post" id="payment-form">
+        <div class="form-row flex-column">
+            <label for="card-element">
+                Credit or debit card
+            </label>
+            <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+            </div>
+
+            <!-- Used to display Element errors. -->
+            <div id="card-errors" role="alert"></div>
+        </div>
+
+        <button class="form-control">Submit Payment</button>
+
+    </form>
+
+</div>
+{% endblock %}

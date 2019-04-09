@@ -1,0 +1,33 @@
+/* .container{
+  margin: 20px 150px ;
+  position: relative;
+  top: 30px;
+  width: 350px;
+
+}
+
+.ml-1 {
+  margin-left: ($spacer * .25) !important;
+} */
+
+/* Blue outline on focus */
+
+.cont{
+  width: 350px;
+  height: 150px;
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  border: 20px;
+  border-radius: 30px;
+}
+
+.StripeElement--focus {
+  border-color: #80BDFF;
+}
+/* Can't see what I type without this */
+#card-number.form-control,
+#card-cvc.form-control,
+#card-exp.form-control {
+  display:block;
+}

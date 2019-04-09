@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" style=" margin:0 auto;">
+
+
+<div class="row">
+    {% for prod in products_list %}
+   <div class="col-sm-2">
+     <div class="card " style="height: 100%; width:100%">
+       <a href="{{prod.get_absolute_url}}"><img class="card-img-top" src="{{prod.image.url}}" alt="Card image cap" style="height: 100%; width:100%"></a>
+      <div class="card-body">
+        <a href="{% url 'cart:cart_add' prod.name %}">Add To Cart</a>
+          <p class="card-text">{{prod.name}}</p>
+          
+  </div>
+</div>
+</div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

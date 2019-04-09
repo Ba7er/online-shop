@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h1>please log in </h1>
+  <form class="" action="" method="post">
+    {{form.as_p}}
+
+    {% csrf_token %}
+    <input type="submit" name="Login" value="Login">
+  </form>
+  <p>You don't have an account?Please create one</p>
+  <a href="{% url 'registerview' %}">Here</a>
+
+
+  </body>
+</html>
