@@ -7,7 +7,7 @@ it has basic e-commerce functionalities
 * Registraion/ login/ logout / reset password by email 
 * Cart app 
 * stripe payment gateway 
-* products category 
+* products catalog
 
 
 ## how to user:
